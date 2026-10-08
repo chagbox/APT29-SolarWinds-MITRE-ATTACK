@@ -1,0 +1,226 @@
+{
+  "name": "APT29 - SolarWinds Compromise (C0024)",
+  "versions": {
+    "attack": "19",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques MITRE ATT&CK documents for the SolarWinds Compromise (C0024), attributed to APT29 (G0016).",
+  "filters": {
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Office 365",
+      "Azure AD",
+      "SaaS",
+      "IaaS",
+      "Network",
+      "Containers",
+      "Identity Provider",
+      "Office Suite"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1195.002",
+      "color": "#4fc3f7",
+      "comment": "APT29 gained access to victims through a trojanized SolarWinds Orion software update. SUNSPOT was used to insert SUNBURST into the Orion build process.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1553.002",
+      "color": "#4fc3f7",
+      "comment": "SUNBURST was incorporated into the Orion software lifecycle and signed using legitimate SolarWinds code-signing certificates.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1059.001",
+      "color": "#4fc3f7",
+      "comment": "APT29 used PowerShell to execute commands, create remote tasks, identify configurations, and conduct other post-compromise activities.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1087.002",
+      "color": "#4fc3f7",
+      "comment": "APT29 used Get-ADUser and Get-ADGroupMember to identify domain accounts.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1482",
+      "color": "#4fc3f7",
+      "comment": "The group used Get-AcceptedDomain and AdFind to identify domains and trust relationships.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1555.003",
+      "color": "#4fc3f7",
+      "comment": "APT29 stole saved Chrome passwords from targeted users.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1098.001",
+      "color": "#4fc3f7",
+      "comment": "The attackers added credentials to OAuth applications and service principals.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1098.003",
+      "color": "#4fc3f7",
+      "comment": "APT29 granted administrator privileges to a newly created service principal.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1484.002",
+      "color": "#4fc3f7",
+      "comment": "APT29 modified federation trust settings so the victim environment would accept tokens signed with the attackers' SAML certificate.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1606.002",
+      "color": "#4fc3f7",
+      "comment": "The attackers created forged SAML tokens using compromised SAML signing certificates to impersonate legitimate users.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1550.001",
+      "color": "#4fc3f7",
+      "comment": "APT29 used compromised service principals and associated authentication material to access and modify Office 365 environments.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1021.001",
+      "color": "#4fc3f7",
+      "comment": "APT29 used RDP sessions from public-facing systems to internal servers.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1021.002",
+      "color": "#4fc3f7",
+      "comment": "The attackers used administrative accounts to connect to targeted users through SMB.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1021.006",
+      "color": "#4fc3f7",
+      "comment": "APT29 used WinRM through PowerShell to execute commands and payloads on remote hosts.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053.005",
+      "color": "#4fc3f7",
+      "comment": "APT29 created or modified scheduled tasks to execute tools remotely and maintain persistence.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1114.002",
+      "color": "#4fc3f7",
+      "comment": "The group used Exchange mailbox commands to collect emails from selected executives and IT personnel.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1213.003",
+      "color": "#4fc3f7",
+      "comment": "APT29 downloaded source code from victim code repositories.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1074.002",
+      "color": "#4fc3f7",
+      "comment": "Collected files and data were staged in password-protected archives on an OWA server.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1560.001",
+      "color": "#4fc3f7",
+      "comment": "APT29 used 7-Zip to compress stolen email and other information into password-protected archives.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1071.001",
+      "color": "#4fc3f7",
+      "comment": "HTTP was used for command and control and data exfiltration.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1568",
+      "color": "#4fc3f7",
+      "comment": "APT29 used dynamic DNS resolution to construct and resolve randomly generated subdomains for C2.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1048.002",
+      "color": "#4fc3f7",
+      "comment": "Collected information was exfiltrated using HTTPS requests to password-protected archives staged on OWA servers.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1685.001",
+      "color": "#4fc3f7",
+      "comment": "APT29 used AUDITPOL to prevent the collection of audit logs.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1686",
+      "color": "#4fc3f7",
+      "comment": "The attackers used netsh to modify firewall rules and restrict certain outbound traffic.",
+      "enabled": true,
+      "showSubtechniques": true
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#4fc3f7"
+    ],
+    "minValue": 0,
+    "maxValue": 1
+  },
+  "legendItems": [
+    {
+      "label": "Used in SolarWinds Compromise (C0024)",
+      "color": "#4fc3f7"
+    }
+  ],
+  "metadata": [],
+  "links": [],
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}
